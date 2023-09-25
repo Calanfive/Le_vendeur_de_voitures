@@ -15,8 +15,8 @@ export class Voiture {
         kilometrage: number,
         prix: number,
         anneeMiseEnCirculation: number
-    ) 
-    {
+        ) 
+        {
         this._marque = marque;
         this._modele = modele;
         this._immatriculation = immatriculation;
@@ -30,4 +30,7 @@ export class Voiture {
         return this._prix
     }
     
+    public get couleur() {
+        return this._couleur;
+    }
 }

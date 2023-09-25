@@ -26,20 +26,34 @@ export class Garage {
         this._listingVoitures = value;
     }
 
-    static voitureMoinsChere(modele1: Voiture, modele2: Voiture) {
+    static getvoitureMoinsChere(modele1: Voiture, modele2: Voiture) {
         return modele1.prix > modele2.prix ? modele2 : modele1
     }
 
-    getVoitureCheaper(){
+    getCarCheaper(){
         let min = this._listingVoitures[0]
 
         for (let i = 0; i < this._listingVoitures.length; i++) {
             const voiture = this._listingVoitures[i];
-            min = Garage.voitureMoinsChere(min, voiture)
+            min = Garage.getvoitureMoinsChere(min, voiture)
         }
 
         return min
     }
 
-    
+
+    getCarsByColor(couleur: string){
+        let tab = []
+
+        for (let iCar = 0; iCar < this._listingVoitures.length; iCar++) {
+            const element = this._listingVoitures[iCar];
+            if (element.couleur === couleur) {
+                tab.push(element)
+            }
+            
+        }
+
+        return tab
+    }
+
 }
