@@ -1,4 +1,6 @@
 import { Vehicule } from "./Vehicule";
+import { Camion } from "./Vehicules/Camion";
+import { Moto } from "./Vehicules/Moto";
 import { Voiture } from "./Vehicules/Voiture";
 
 export class Garage {
@@ -61,21 +63,23 @@ export class Garage {
             const element = this._listingVoitures[iCar];
             if (element.couleur === couleur) {
                 tab.push(element)
-            }
-            
+            }  
         }
 
         return tab
     }
 
     getTypeOfVehicules(categorie: String){
-        let tabl = []
+        let tabl : Vehicule[] = []
 
-        for (let index = 0; this._listingVehicules.length < tabl.length; index++) {
+        for (let index = 0; index < this._listingVehicules.length; index++) {
             const box = this._listingVehicules[index];
-            if (categorie instanceof Vehicule) {
-                tabl.push(categorie)
+            if (box.constructor.name == categorie) {
+                tabl.push(box)
+                console.log("hello moto");
+                
             }
         }
+        return tabl
     }
 }

@@ -6,6 +6,7 @@ export abstract class Vehicule {
     private _couleur: string;
     private _prix: number;
     private _anneeMiseEnCirculation: number;
+
     
     constructor( 
         marque: string,
