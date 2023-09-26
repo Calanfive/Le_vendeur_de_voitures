@@ -1,5 +1,5 @@
 export abstract class Vehicule {
-    private _marque: string;
+    private _marque: string; 
     private _modele: string;
     private _immatriculation: number;
     private _kilometrage: number;
@@ -7,7 +7,7 @@ export abstract class Vehicule {
     private _prix: number;
     private _anneeMiseEnCirculation: number;
     
-    constructor ( 
+    constructor( 
         marque: string,
         modele: string,
         immatriculation: number,
@@ -15,8 +15,7 @@ export abstract class Vehicule {
         kilometrage: number,
         prix: number,
         anneeMiseEnCirculation: number
-        ) 
-        {
+        ){
         this._marque = marque;
         this._modele = modele;
         this._immatriculation = immatriculation;
