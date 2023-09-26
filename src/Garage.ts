@@ -1,4 +1,4 @@
-import { Voiture } from "./Voiture";
+import { Voiture } from "./Vehicules/Voiture";
 
 export class Garage {
     private _nomGarage: string;
